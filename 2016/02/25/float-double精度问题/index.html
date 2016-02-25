@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="scala," />
 
 
 
@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Valar Morghulis">
 <meta property="og:description" content="背景：在做一个订餐网站时，需要后台根据菜品和数量计算出总价。一开始价格字段在数据库中是用float类型存的，实际用起来后发现数据会出问题，莫名其妙会多出很多小数，比如0.14，存到数据库后就变成0.13999999，数据库里存的0.14，读取后也变成0.13999999或0.140000001。
 其实原因很简单，在本科的《计算机组成原理》课上也学到过。我们知道，数字在计算机中是用二进制存储的十进制">
-<meta property="og:updated_time" content="2016-02-25T05:29:50.470Z">
+<meta property="og:updated_time" content="2016-02-25T05:39:36.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="float,double精度问题">
 <meta name="twitter:description" content="背景：在做一个订餐网站时，需要后台根据菜品和数量计算出总价。一开始价格字段在数据库中是用float类型存的，实际用起来后发现数据会出问题，莫名其妙会多出很多小数，比如0.14，存到数据库后就变成0.13999999，数据库里存的0.14，读取后也变成0.13999999或0.140000001。
@@ -148,6 +148,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -225,6 +235,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/source/categories/问题研究/" itemprop="url" rel="index">
+                    <span itemprop="name">问题研究</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -270,6 +299,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/scala/" rel="tag">#scala</a>
+          
+        </div>
       
 
       
@@ -364,11 +399,18 @@
           </div>
           
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
