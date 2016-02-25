@@ -88,7 +88,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/有哪些工具或软件堪称神器/" data-id="cil1p9opd00019kl2sjhsq1jo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/有哪些工具或软件堪称神器/" data-id="cil1prsxo0001nkl2kma5htv7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -125,7 +125,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/代码原来可以这么写/" data-id="cil1p9opg00029kl26viejtej" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/代码原来可以这么写/" data-id="cil1prsxo0002nkl2lh2sywn9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -168,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/float-double精度问题/" data-id="cil1p9op000009kl2schfwgbj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/float-double精度问题/" data-id="cil1prsx90000nkl2oyqa2a6v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -219,11 +219,15 @@
 <p>该命令执行完后，会在 D:\HexoBlog\public\ 目录下生成一系列html，css等文件。</p>
 <h4 id="3-8-编辑文章"><a href="#3-8-编辑文章" class="headerlink" title="3.8 编辑文章"></a><strong>3.8 编辑文章</strong></h4><p>hexo new “My New Post”会在D:\Hexo\source_posts目录下生成一个markdown文件：My-New-Post.md</p>
 <p>可以使用一个支持markdown语法的编辑器（比如 Sublime Text）来编辑该文件。</p>
+<h3 id="4-部署到github"><a href="#4-部署到github" class="headerlink" title="4.部署到github"></a><strong>4.部署到github</strong></h3><h4 id="4-1-修改配置文件"><a href="#4-1-修改配置文件" class="headerlink" title="4.1 修改配置文件"></a><strong>4.1 修改配置文件</strong></h4><p>部署到Github前需要配置_config.yml文件，首先找到下面的内容<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="title">deploy</span>:</span><br><span class="line">  <span class="typedef"><span class="keyword">type</span>:</span></span><br></pre></td></tr></table></figure></p>
+<p>然后将它们修改为<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="operator">type</span>: github</span><br><span class="line">  repository: https://github.com/liboren/liboren.github.io.git (Github仓库地址,如何搭建github仓库请自行研究)</span><br><span class="line">  branch: <span class="keyword">master</span> <span class="title">(分支名称)</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="4-2-安装hexo-deployer-git"><a href="#4-2-安装hexo-deployer-git" class="headerlink" title="4.2 安装hexo-deployer-git"></a><strong>4.2 安装hexo-deployer-git</strong></h4><p>执行以下命令<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
+<h4 id="4-3-部署"><a href="#4-3-部署" class="headerlink" title="4.3 部署"></a><strong>4.3 部署</strong></h4><p>执行命令<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
 <h3 id="遇到的一些问题和解决方法"><a href="#遇到的一些问题和解决方法" class="headerlink" title="遇到的一些问题和解决方法"></a>遇到的一些问题和解决方法</h3><h4 id="1-输入hexo-server-显示没有这个命令"><a href="#1-输入hexo-server-显示没有这个命令" class="headerlink" title="1.输入hexo server 显示没有这个命令"></a>1.输入hexo server 显示没有这个命令</h4><h4 id="解决方法：执行npm-install-hexo-server-–save命令"><a href="#解决方法：执行npm-install-hexo-server-–save命令" class="headerlink" title="解决方法：执行npm install hexo-server –save命令"></a>解决方法：执行npm install hexo-server –save命令</h4><h4 id="2-起了服务后打开localhost-4000出来Cannot-GET"><a href="#2-起了服务后打开localhost-4000出来Cannot-GET" class="headerlink" title="2.起了服务后打开localhost:4000出来Cannot GET /"></a>2.起了服务后打开localhost:4000出来Cannot GET /</h4><h4 id="解决方法：执行npm-install命令"><a href="#解决方法：执行npm-install命令" class="headerlink" title="解决方法：执行npm install命令"></a>解决方法：执行npm install命令</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/25/hexo安装教程-github部署教程/" data-id="cil1p9oph00039kl2uzx4o4qi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/25/hexo安装教程-github部署教程/" data-id="cil1prsxo0003nkl2ep17635s" class="article-share-link">Share</a>
       
       
     </footer>
